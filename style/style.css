@@ -1,0 +1,25 @@
+
+
+.titleContainer{
+    background-color: rgba(125, 125, 126, 0.801);
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(116, 116, 116);
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.principalTitle{
+    font-size: 30px;
+}
+
+
+#boxText{
+    margin: 1%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    resize: none;
+
+
+}
