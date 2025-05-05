@@ -1,39 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>Text Editor</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Notes and Et-cetera</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
+
 <body>
-    <header class="titleContainer">
-        <h1 class="principalTitle">Notes and Et-cetera</h1>
+    <header class="title">
+          <h1>Notes and Et-cetera</h1>
     </header>
+<br>
 
-    <div>
-        Área de Arquivos Salvos
-    </div>
+<div id="editor">
+
+    <select id="headering">
+        <option value="h1">H1</option>
+        <option value="h2">H2</option>
+        <option value="h3">H3</option>
+        <option value="h4">H4</option>
+        <option value="h5">H5</option>
+        <option value="h6">H6</option>
+
+    </select>
 
 
+    <button id="undo"><i class="fas fa-undo"></i></button>
+    <button id="redo"><i class="fas fa-redo"></i></button>
+    <button id="bold"><i class="fas fa-bold"></i></button>
+    <button id="italic"><i class="fas fa-italic"></i></button>
+    <button id="underline"><i class="fas fa-underline"></i></button>
+    <button id="strikethrough"><i class="fas fa-strikethrough"></i></button>
+    <button id="subscript"><i class="fas fa-subscript"></i></button>
+    <button id="superscript"><i class="fas fa-superscript"></i></button>
+    <button id="bold"><i class="fas fa-bold"></i></button>
 
-    <div class="toolBar">
-        <button onclick = "editOpt1()" title="Bold text" >Bold</button>
-    </div>
+    <select id="fontSize">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
 
-    <div class="textArea">
-        <textarea id="boxText" name="boxText" rows="25" cols="100" autofocus=true maxlength="1500" wrap="hard" >
-            
-        </textarea>
-    </div>
+    <button id="textColor"><i class="fas fa-font"></i></button>
+    <button id="bgColor"><i class="fas fa-fill-drip"></i></button>
 
+    <select id="font">
+        <option value="Arial">Arial</option>
+        <option value="TimesNewRoman"> Times New Roman</option>
+        <option value="Courier New"> Courier New</option>
+    </select>
+
+
+    <button id="alignLeft"><i class="fas fa-align-left"></i></button>
+    <button id="alignCenter"><i class="fas fa-align-center"></i></button>
+    <button id="alignRight"><i class="fas fa-align-right"></i></button>
+    <button id="alignJustify"><i class="fas fa-align-justify"></i></button>
+   
+    <button id="outdent"><i class="fas fa-outdent"></i></button>
+    <button id="indent"><i class="fas fa-indent"></i></button>
+
+    <button id="orderedList"><i class="fas fa-list-ol"></i></button>
+    <button id="unorderedList"><i class="fas fa-list-ul"></i></button>
+
+    <button id="insertImageUrl"><i class="fas fa-image"></i></button>
+    <button id="insertImageFile"><i class="fas fa-upload"></i></button>
+    <textarea rows="20" cols="100" contenteditable="true" id="recipeText"></textarea>
+
+</div>
+
+<input type="color" id="colorTextPick" style="display: none;">
+<input type="color" id="bgColorPick" style="display: none;">
     
 
-    <div>
-        submit de texo 
-    </div>
-    
 
-    <script src="toolBar.js"></script>
+
+
+    
+    <section class="Toolbar"></section>
+    
+        <div class="containerTexto">
+        </div>
+
+
+
 </body>
+
+<script src="/js/markdown.js"></script>
+
 </html>
