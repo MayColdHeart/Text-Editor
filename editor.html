@@ -7,10 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="toolBar.js"></script>
 
     <title>Notes and Et-cetera</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
 </head>
 
@@ -30,19 +32,22 @@
         <option value="h4">H4</option>
         <option value="h5">H5</option>
         <option value="h6">H6</option>
-
     </select>
 
 
-    <button id="undo"><i class="fas fa-undo"></i></button>
-    <button id="redo"><i class="fas fa-redo"></i></button>
-    <button id="bold"><i class="fas fa-bold"></i></button>
+    <button id="undo"><i class="fas fa-undo" onclick="undo()"></i></button>
+    <button id="redo"><i class="fas fa-redo" onclick="redo()"></i></button>
+    <button id="bold"><i class="fas fa-bold" onclick="bold()"></i></button>
     <button id="italic"><i class="fas fa-italic"></i></button>
     <button id="underline"><i class="fas fa-underline"></i></button>
     <button id="strikethrough"><i class="fas fa-strikethrough"></i></button>
     <button id="subscript"><i class="fas fa-subscript"></i></button>
     <button id="superscript"><i class="fas fa-superscript"></i></button>
-    <button id="bold"><i class="fas fa-bold"></i></button>
+
+
+
+
+
 
     <select id="fontSize">
         <option value="1">1</option>
@@ -79,27 +84,13 @@
 
     <button id="insertImageUrl"><i class="fas fa-image"></i></button>
     <button id="insertImageFile"><i class="fas fa-upload"></i></button>
-    <textarea rows="20" cols="100" contenteditable="true" id="recipeText"></textarea>
 
-</div>
+ <div id="editor" contentEditable="true" style="border: 1px solid #ccc; padding: 10px;">
 
 <input type="color" id="colorTextPick" style="display: none;">
 <input type="color" id="bgColorPick" style="display: none;">
     
 
 
-
-
-    
-    <section class="Toolbar"></section>
-    
-        <div class="containerTexto">
-        </div>
-
-
-
 </body>
-
-<script src="/js/markdown.js"></script>
-
 </html>

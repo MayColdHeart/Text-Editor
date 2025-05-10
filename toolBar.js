@@ -1,4 +1,13 @@
-function editOpt1() {
-    document.getElementById("boxText")
-        .style.fontWeight = "bold";
+
+function undo() {
+    document.execCommand('undo');
+}
+
+function redo() {
+    document.execCommand('redo')
+}
+
+
+function bold() {
+    document.execCommand('bold'); 
 }
