@@ -23,9 +23,10 @@
     </header>
 <br>
 
-<div id="editor">
 
-    <select id="headering">
+
+<div class="toolsContainer">
+ <select id="headering" onchange="heading(this.value)">
         <option value="h1">H1</option>
         <option value="h2">H2</option>
         <option value="h3">H3</option>
@@ -34,22 +35,20 @@
         <option value="h6">H6</option>
     </select>
 
+    <button id="undo" onclick="undo()"><i class="fas fa-undo"></i></button>
+    <button id="redo" onclick="redo()"><i class="fas fa-redo"></i></button>
+    <button id="bold" onclick="bold()"><i class="fas fa-bold"></i></button>
+    <button id="italic" onclick="italic()"><i class="fas fa-italic"></i></button>
+    <button id="underline" onclick="underline()"><i class="fas fa-underline"></i></button>
 
-    <button id="undo"><i class="fas fa-undo" onclick="undo()"></i></button>
-    <button id="redo"><i class="fas fa-redo" onclick="redo()"></i></button>
-    <button id="bold"><i class="fas fa-bold" onclick="bold()"></i></button>
-    <button id="italic"><i class="fas fa-italic"></i></button>
-    <button id="underline"><i class="fas fa-underline"></i></button>
-    <button id="strikethrough"><i class="fas fa-strikethrough"></i></button>
-    <button id="subscript"><i class="fas fa-subscript"></i></button>
-    <button id="superscript"><i class="fas fa-superscript"></i></button>
-
-
+    <button id="strikethrough" onclick="strikethrough()"><i class="fas fa-strikethrough"></i></button>
+    <button id="subscript" onclick="subscript()"><i class="fas fa-subscript"></i></button>
+    <button id="superscript" onclick="superscript()"><i class="fas fa-superscript"></i></button>
 
 
-
-
-    <select id="fontSize">
+    <div class="fontSizeCont">
+    <button id="actress" onclick="actress()"><i class="fas fa-plus"></i></button>
+    <select id="fontSize" onchange="fontSize(this.value)">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -57,40 +56,44 @@
         <option value="5">5</option>
         <option value="6">6</option>
         <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
     </select>
+    <button id="decrease" onclick="decrease()"><i class="fas fa-minus"></i></button>
+    </div>
 
-    <button id="textColor"><i class="fas fa-font"></i></button>
-    <button id="bgColor"><i class="fas fa-fill-drip"></i></button>
 
-    <select id="font">
+
+    <button id="textColor" onclick="changeTextColor()"><i class="fas fa-font"></i></button>
+    <button id="bgColor" onclick="changeBgColor()"><i class="fas fa-fill-drip"></i></button>
+
+    <select id="font" onchange="changeFont(this.value)">
         <option value="Arial">Arial</option>
-        <option value="TimesNewRoman"> Times New Roman</option>
-        <option value="Courier New"> Courier New</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
     </select>
 
+    <button id="alignLeft" onclick="alignLeft()"><i class="fas fa-align-left"></i></button>
+    <button id="alignCenter" onclick="alignCenter()"><i class="fas fa-align-center"></i></button>
+    <button id="alignRight" onclick="alignRight()"><i class="fas fa-align-right"></i></button>
+    <button id="alignJustify" onclick="alignJustify()"><i class="fas fa-align-justify"></i></button>
 
-    <button id="alignLeft"><i class="fas fa-align-left"></i></button>
-    <button id="alignCenter"><i class="fas fa-align-center"></i></button>
-    <button id="alignRight"><i class="fas fa-align-right"></i></button>
-    <button id="alignJustify"><i class="fas fa-align-justify"></i></button>
-   
-    <button id="outdent"><i class="fas fa-outdent"></i></button>
-    <button id="indent"><i class="fas fa-indent"></i></button>
+    <button id="outdent" onclick="outdent()"><i class="fas fa-outdent"></i></button>
+    <button id="indent" onclick="indent()"><i class="fas fa-indent"></i></button>
 
-    <button id="orderedList"><i class="fas fa-list-ol"></i></button>
-    <button id="unorderedList"><i class="fas fa-list-ul"></i></button>
+    
+    <button id="orderedList" onclick="orderedList()"><i class="fas fa-list-ol"></i></button>
+    <button id="unorderedList" onclick="unorderedList()"><i class="fas fa-list-ul"></i></button>
 
-    <button id="insertImageUrl"><i class="fas fa-image"></i></button>
+
+    <button id="insertImageUrl" onclick="insertImageUrl()"><i class="fas fa-image"></i></button>
     <button id="insertImageFile"><i class="fas fa-upload"></i></button>
 
- <div id="editor" contentEditable="true" style="border: 1px solid #ccc; padding: 10px;">
 
-<input type="color" id="colorTextPick" style="display: none;">
-<input type="color" id="bgColorPick" style="display: none;">
-    
 
+    <input type="color" id="colorTextPick" style="display: none;">
+    <input type="color" id="bgColorPick" style="display: none;">
+</div>
+
+       <div id="editor" contentEditable="true" style="border: 1px solid #ccc; padding: 10px;"></div>
 
 </body>
 </html>
